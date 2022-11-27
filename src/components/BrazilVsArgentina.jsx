@@ -19,11 +19,11 @@ const BrazilVsArgentina = () => {
 
   return (
     <div>
-      <h2 className="brazil" ref={braRef}>
-        Brazil : {goals.bra}
-      </h2>
       <h2 className="argentina" ref={argRef}>
         Argentina : {goals.arg}
+      </h2>
+      <h2 className="brazil" ref={braRef}>
+        Brazil : {goals.bra}
       </h2>
     </div>
   );

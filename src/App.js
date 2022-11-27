@@ -1,10 +1,20 @@
+import { createContext } from "react";
 import "./App.css";
-import BrazilVsArgentina from "./components/BrazilVsArgentina";
+import CosmeticsStore from "./components/CosmeticsStore";
+
+export const CosmeticContext = createContext();
 
 function App() {
+  const cosmetics = {
+    numOfSell: 100,
+    bestSelling: "Lipstick",
+  };
+
   return (
     <div className="App">
-      <BrazilVsArgentina />
+      <CosmeticContext.Provider value={cosmetics}>
+        <CosmeticsStore />
+      </CosmeticContext.Provider>
     </div>
   );
 }
